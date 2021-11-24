@@ -1,5 +1,8 @@
+import * as dotenv from 'dotenv'
+dotenv.config()
+
 import { join } from 'path';
-import AutoLoad, {AutoloadPluginOptions} from 'fastify-autoload';
+import AutoLoad, { AutoloadPluginOptions } from 'fastify-autoload';
 import { FastifyPluginAsync } from 'fastify';
 
 export type AppOptions = {
@@ -7,8 +10,8 @@ export type AppOptions = {
 } & Partial<AutoloadPluginOptions>;
 
 const app: FastifyPluginAsync<AppOptions> = async (
-    fastify,
-    opts
+  fastify,
+  opts
 ): Promise<void> => {
   // Place here your custom code!
 
